@@ -320,7 +320,6 @@ class Noise2Noise(object):
                     source = source.cuda()
                     target = target.cuda()
                     label = label.cuda()
-                new_order = [0, 1, 2, 3, 8, 9, 10, 4, 5, 6, 7, 11, 12, 13]
 
                 source_de = source.index_select(1, torch.tensor(new_order).cuda())
                 target_de = target.narrow(1, 0, self.p.ncha)
@@ -414,7 +413,6 @@ class Noise2Noise(object):
 
                 batch_start = datetime.now()
                 progress_bar(batch_idx, num_batches, self.p.report_interval, loss_meter.val)
-                new_order = [0, 1, 2, 3, 8, 9, 10, 4, 5, 6, 7, 11, 12, 13]
 
                 source_de = source.index_select(1, torch.tensor(new_order).cuda())
                 target_de = target.narrow(1, 0, self.p.ncha)
