@@ -1,2 +1,12 @@
-# PolSAR-DESPECKLING-MTDN
-PolSAR despeckling codes for MTDN
+# A Multi-task Learning Framework for Dual-polarization SAR Imagery Despeckling in Temporal Change Detection Scenarios
+
+**Jie Li**, **Shaowei Shi**, **Liupeng Lin**, **Qiangqiang Yuan**, **Huanfeng Shen**, **Liangpei Zhang**
+
+**Abstract**:
+_The despeckling task for synthetic aperture radar (SAR) has long faced the challenge of obtaining clean images. Although unsupervised deep learning despeckling methods alleviate this issue, they often struggle to balance despeckling effectiveness and the preservation of spatial details. Furthermore, some unsupervised despeckling approaches overlook the effect of land cover changes when dual-temporal SAR images are used as training data. To address this issue, we propose a multitask learning framework for dual-polarization SAR imagery despeckling and change detection (MTDN). This framework integrates polarization decomposition mechanisms with dual-polarization SAR images, and utilizes a change detection network to guide and constrain the despeckling network for optimized performance. Specifically, the despeckling branch of this framework incorporates polarization and spatiotemporal information from dual-temporal dual-polarization SAR images to construct a despeckling network. It employs various attention mechanisms to recalibrate features across local/global, channel, and spatial dimensions, and before and after despeckling. The change detection branch, which combines Transformer and convolutional neural networks, helps the despeckling branch effectively filter out spatiotemporal information with substantial changes. The multitask joint loss function is weighted by the generated change detection mask to achieve collaborative optimization. Despeckling and change detection experiments are conducted using a dual-polarization SAR dataset to assess the effectiveness of the proposed framework. The despeckling experiments indicate that MTDN efficiently eliminates speckle noise while preserving polarization information and spatial details, and surpasses current leading SAR despeckling methods. The equivalent number of looks (ENL) for MTDN in the agricultural change area increased to 155.0630, and the edge detail preservation (EPD) metric improved to 0.9963. In contrast, the best-performing deSpeckNet among the comparison methods achieved ENL = 81.9933 and EPD = 0.9739 in the same region. Furthermore, the change detection experiments confirm that MTDN yields precise predictions, highlighting its exceptional capability in practical applications._
+
+**Official Pytorch implementation for the paper accepted by ISPRS.**
+
+![Denoising comparison](img/readme_figure1.png "Denoising comparison")
+
+![Denoising comparison](img/readme_figure2.png "Denoising comparison")
