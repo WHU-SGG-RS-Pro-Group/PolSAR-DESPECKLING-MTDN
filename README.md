@@ -9,7 +9,26 @@ _The despeckling task for synthetic aperture radar (SAR) has long faced the chal
 
 <div style="display: flex; justify-content: space-between;">
     <img src="img/Comparison_results_1.png" alt="Denoising comparison 1" style="width: 48%;"/>
-    <img src="img/Comparison_results_2.png" alt="Denoising comparison 2" style="width: 48%;"/>
+    <img src="img/Comparison_results_2.png" alt="Denoising comparison 2" style="width: 41%;"/>
 </div>
 
+## Resources
 
+- [Arxiv]()
+- [Conference]()
+- [Supplementary]()
+
+## Python Requirements
+
+This code was tested on:
+
+- Python 3.9
+- Pytorch 1.0
+
+## Sentinel-1_DATA
+LINK: https://pan.baidu.com/s/1Z8fmNKd8j-sULqXrlzs1Ow?pwd=0116
+
+## Preparing Training Dataset
+
+Images in the training set are from the Sentinel-1 dataset with size 17700*8500 pixels.
+There are 22 time points in total.
