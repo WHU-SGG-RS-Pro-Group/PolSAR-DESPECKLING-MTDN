@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/beb45099-3066-41ca-be4d-89d7310ccd2e)# A Multi-task Learning Framework for Dual-polarization SAR Imagery Despeckling in Temporal Change Detection Scenarios
+# A Multi-task Learning Framework for Dual-polarization SAR Imagery Despeckling in Temporal Change Detection Scenarios
 
 **Jie Li**, **Shaowei Shi**, **Liupeng Lin**, **Qiangqiang Yuan**, **Huanfeng Shen**, **Liangpei Zhang**
 
