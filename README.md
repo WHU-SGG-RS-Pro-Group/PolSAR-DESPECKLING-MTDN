@@ -1,4 +1,4 @@
-# A Multi-task Learning Framework for Dual-polarization SAR Imagery Despeckling in Temporal Change Detection Scenarios
+![image](https://github.com/user-attachments/assets/beb45099-3066-41ca-be4d-89d7310ccd2e)# A Multi-task Learning Framework for Dual-polarization SAR Imagery Despeckling in Temporal Change Detection Scenarios
 
 **Jie Li**, **Shaowei Shi**, **Liupeng Lin**, **Qiangqiang Yuan**, **Huanfeng Shen**, **Liangpei Zhang**
 
@@ -32,4 +32,39 @@ LINK: https://pan.baidu.com/s/1Z8fmNKd8j-sULqXrlzs1Ow?pwd=0116
 
 Images in the training set are from the Sentinel-1 dataset with size 17700*8500 pixels.There are 22 time points in total. Use polsarPro to extract its covariance matrix and cut it into a training set of size 128*128.
 The size of each data in the training set is [N=3, H=128, W=128, C=14], where N=1 is the training data: the first and second of three consecutive noise images (directly spliced ​​along the channel dimension), N=2 is the target data: the third of three consecutive noise images, and N=3 is the change detection label (T1 and T2) As shown below:
-![Denoising comparison](img/readme_figure1.png "Denoising comparison")
+Train Dataset
+N=1 T1 (4+3 channel) + T2 (4+3 channel) 
+N=2 T3 (4+3 channel)
+N=3 Change detection label (1 channel)
+
+```bash
+python train.py 
+--train-dir=./../MTDN/data/train 
+--valid-dir=./../MTDN/data
+--ckpt-save-path=./../MTDN/ckpts
+```
+- optional arguments:
+  - `train-dir` Path to the Train set
+  - `valid-dir` Path to the Valid set
+  - `ckpt-save-path` Path to save the training set
+ 
+ - ## Training
+
+To train a network, run:
+
+```bash
+python train.py 
+--train-dir=./../MTDN/data/train 
+--valid-dir=./../MTDN/data
+--ckpt-save-path=./../MTDN/ckpts
+--pre-cd-model=./../MTDN/models/changedetection/n2n-epoch100.pth
+```
+- selected optional arguments:
+  - `train-dir` Path to the Train set
+  - `valid-dir` Path to the Valid set
+  - `ckpt-save-path` Path to save the training set
+  - pre-cd-model=Pre-trained change detection model parameters
+ 
+## Citations
+
+
