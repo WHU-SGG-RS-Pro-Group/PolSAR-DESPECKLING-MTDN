@@ -7,6 +7,6 @@ _The despeckling task for synthetic aperture radar (SAR) has long faced the chal
 
 **Official Pytorch implementation for the paper accepted by ISPRS.**
 
-![Denoising comparison](img/readme_figure1.png "Denoising comparison")
+![Denoising comparison](img/Comparison results 1.png "Denoising comparison")
 
-![Denoising comparison](img/readme_figure2.png "Denoising comparison")
+![Denoising comparison](img/Comparison results 2.png "Denoising comparison")
